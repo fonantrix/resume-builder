@@ -1,0 +1,88 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "templateSectionFields",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "sectionID",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "fieldIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "templateSections",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "templateID",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "sectionIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "userResume",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userID",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdDateTime",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "userResumeSections",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "resumeID",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "sectionIndex",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "field",
+      "fieldPath": "fieldContentType",
+      "indexes": [
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION"
+        },
+        {
+          "order": "DESCENDING",
+          "queryScope": "COLLECTION"
+        },
+        {
+          "arrayConfig": "CONTAINS",
+          "queryScope": "COLLECTION"
+        },
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION_GROUP"
+        },
+        {
+          "arrayConfig": "CONTAINS",
+          "queryScope": "COLLECTION_GROUP"
+        }
+      ]
+    }
+  ]
+}
